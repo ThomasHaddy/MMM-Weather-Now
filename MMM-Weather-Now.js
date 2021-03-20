@@ -65,7 +65,7 @@ Module.register('MMM-Weather-Now', {
 		if (this.nowTemp !== '--') {
 			if (this.units === 'M') {
 				C = this.nowTemp;
-				F = Math.round( (((C*9)/5)+32) * 10 ) / 10;
+				F = (((C*9)/5)+32) * 10 / 10;
 			} else {
 				F = this.nowTemp;
 				C = Math.round( (((F-32)*5)/9) * 10 ) / 10;
@@ -151,7 +151,7 @@ Module.register('MMM-Weather-Now', {
 	            if (this.units === 'M') {
 					nowTempDiv.innerHTML = this.translate('FEELS_LIKE') + ' ' + C + '&deg; C (' + F + '&deg; F)';
 	            } else {
-	                nowTempDiv.innerHTML = this.translate('FEELS_LIKE') + ' ' + F + '&deg; F (' + C + '&deg; C)';
+	                nowTempDiv.innerHTML = this.translate('FEELS_LIKE') + ' ' + F + '&deg; F';
 	                }
 
 	            // Add elements to the nowDetail div
